@@ -1,5 +1,5 @@
 <template>
-  <Tutorial/>
+  <div>2223</div>
 </template>
 
 <script>
