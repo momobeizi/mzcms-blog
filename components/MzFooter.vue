@@ -15,10 +15,10 @@ export default {
 
 <style lang="scss" scoped>
 #footer {
-  width: 100%;
   height: auto;
   padding: 1px;
   background: rgba(0, 0, 0, 0.6);
+  color: #fff;
   .footer-content {
     width: 100%;
     height: 60px;

@@ -2,17 +2,8 @@
   <header id="header">
     <nav class="header-nav">
       <div class="menus-items">
-        <div class="menus-item">
-          1
-        </div>
-        <div class="menus-item">
-          2
-        </div>
-        <div class="menus-item">
-          3
-        </div>
-        <div class="menus-item">
-          4
+        <div class="menus-item" v-for="(item, index) in menuList" :key="index">
+          {{ item.name }}
         </div>
       </div>
     </nav>
@@ -21,7 +12,22 @@
 
 <script>
 export default {
-  name: 'MzHeader'
+  name: 'MzHeader',
+  asyncData () {
+    // let result = 
+    // await getMenuList().then(res => {
+    //   result.menuList = res
+    // })
+    // console.log(result)
+    return {
+      menuList: [{ id: 1, name: '菜单1' }, { id: 2, name: '菜单2' }, { id: 3, name: '菜单3' }, { id: 4, name: '菜单4' }, { id: 5, name: '菜单5' }]
+    }
+  },
+  data () {
+    return {
+      
+    }
+  }
 }
 </script>
 
@@ -29,6 +35,7 @@ export default {
 #header {
   height: 60px;
   width: 100%;
+
   .header-nav {
     .menus-items {
       display: flex;
@@ -39,10 +46,11 @@ export default {
       right: 0;
       top: 10px;
       margin: auto;
-      .menus_item {
+
+      .menus-item {
+        padding: 0 4px;
         position: relative;
         display: inline-block;
-        padding: 0px 0px 0px 14px;
       }
     }
   }
