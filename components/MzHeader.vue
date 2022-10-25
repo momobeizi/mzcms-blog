@@ -13,19 +13,13 @@
 <script>
 export default {
   name: 'MzHeader',
-  asyncData () {
-    // let result = 
-    // await getMenuList().then(res => {
-    //   result.menuList = res
-    // })
-    // console.log(result)
-    return {
-      menuList: [{ id: 1, name: '菜单1' }, { id: 2, name: '菜单2' }, { id: 3, name: '菜单3' }, { id: 4, name: '菜单4' }, { id: 5, name: '菜单5' }]
-    }
+  async fetch () {
+    this.menuList = [{ id: 1, name: '菜单1' }, { id: 2, name: '菜单2' }, { id: 3, name: '菜单3' }, { id: 4, name: '菜单4' }, { id: 5, name: '菜单5' }]
   },
+  fetchOnServer: true,
   data () {
     return {
-      
+      menuList: []
     }
   }
 }
@@ -40,17 +34,22 @@ export default {
     .menus-items {
       display: flex;
       justify-content: center;
+      align-items: center;
       position: absolute;
       width: 500px;
+      height: 60px;
       left: 0;
       right: 0;
-      top: 10px;
+      top: 0;
       margin: auto;
 
       .menus-item {
-        padding: 0 4px;
+        padding: 4px 20px;
         position: relative;
         display: inline-block;
+        &:hover{
+          cursor: pointer;
+        }
       }
     }
   }

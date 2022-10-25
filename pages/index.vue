@@ -1,5 +1,5 @@
 <template>
-  <div>{{menuList}}</div>
+  <div></div>
 </template>
 
 <script>
@@ -12,7 +12,7 @@ export default {
     // })
     // console.log(result)
     return {
-      menuList: [{ id: 1, name: '菜单1' }, { id: 2, name: '菜单2' }, { id: 3, name: '菜单3' }, { id: 4, name: '菜单4' }, { id: 5, name: '菜单5' }]
+       
     }
   },
 }
